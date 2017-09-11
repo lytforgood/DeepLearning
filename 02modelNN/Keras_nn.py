@@ -15,7 +15,7 @@ from keras.optimizers import RMSprop
 
 
 # **数据格式说明**
-# - x为28x28的矩阵(6000train+1000test)
+# - x为28x28的矩阵(60000train+10000test)
 # - y是0-9的数字
 
 # In[3]:
