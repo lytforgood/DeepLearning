@@ -1,12 +1,12 @@
 
 # coding: utf-8
 
-# **RNN 实现**
-# 
+# **CNN 实现**
+#
 # CNN相比与传统神经网络，主要区别是引入了卷积层和池化层
 # 卷积是使用tf.nn.conv2d, 池化使用tf.nn.max_pool
 
-# ## RNN之keras实现
+# ## CNN之keras实现
 
 # In[11]:
 
@@ -29,15 +29,15 @@ y_test = np_utils.to_categorical(y_test, num_classes=10)
 
 
 # [卷积层Convolutional官方](http://keras-cn.readthedocs.io/en/latest/layers/convolutional_layer/)
-# 
+#
 # keras.layers.convolutional.Conv2D(filters, kernel_size, strides=(1, 1), padding='valid', data_format=None, dilation_rate=(1, 1), activation=None, use_bias=True, kernel_initializer='glorot_uniform', bias_initializer='zeros', kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None)
-# 
+#
 
 # In[12]:
 
 #建立模型 使用卷积层
 model = Sequential()
-#输出的维度 “same”代表保留边界处的卷积结果 “valid”代表只进行有效的卷积，即对边界数据不处理   height & width & channels 
+#输出的维度 “same”代表保留边界处的卷积结果 “valid”代表只进行有效的卷积，即对边界数据不处理   height & width & channels
 model.add(Conv2D(32, (5, 5),padding='same', activation='relu', input_shape=(28, 28, 1)))
 #pool_size下采样因子 strides步长
 model.add(MaxPooling2D(pool_size=(2, 2),strides=(2, 2),border_mode='same'))

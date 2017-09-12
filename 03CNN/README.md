@@ -1,5 +1,5 @@
 # DeepLearning                                                                              
 
-- keras_RNN.py keras实现RNN
-- TensorFlow_RNN.py TensorFlow实现RNN
+- keras_CNN.py keras实现CNN
+- TensorFlow_CNN.py TensorFlow实现CNN
 

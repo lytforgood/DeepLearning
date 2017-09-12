@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# ## RNN之TensorFlow实现
+# ## CNN之TensorFlow实现
 
 # In[1]:
 
